@@ -5,12 +5,18 @@ public class Loan {
     private double interest;
     private String contactNumber;
 
+    private static int maxLoanAmount = 0;
+
     public Loan(int amount, String borrower, double interest, String contactNumber) {
         this.amount = amount;
         this.borrower = borrower;
         this.interest = interest;
         this.contactNumber = contactNumber;
         this.isPaid = false;
+    }
+
+    public static int getMaxLoanAmount() {
+        return maxLoanAmount;
     }
 
     public int getAmount() {
